@@ -30,6 +30,8 @@
     ],
     "rules": {
         "no-use-before-define": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/props-types": "off",
         "@typescript-eslint/no-use-before-define": "off",
         "prettier/prettier": ["error", {
          "endOfLine":"auto"
