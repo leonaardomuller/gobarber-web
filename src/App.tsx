@@ -5,15 +5,17 @@ import GlobalStyle from './styles/global';
 import SignIn from './pages/SignIn/index';
 import SignUp from './pages/SignUp/index';
 
-import AuthContext from './context/AuthContext';
+import { AuthProvider } from './context/AuthContext';
 
-const App: React.FC = () => (
-  <>
-    <AuthContext.Provider value={{ name: 'Leonardo' }}>
-      <SignUp />
-    </AuthContext.Provider>
+const App: React.FC = () => {
+  return (
+    <>
+      <AuthProvider>
+        <SignUp />
+      </AuthProvider>
 
-    <GlobalStyle />
-  </>
-);
+      <GlobalStyle />
+    </>
+  );
+};
 export default App;
