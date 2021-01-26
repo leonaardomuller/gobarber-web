@@ -3,7 +3,7 @@ import api from '../services/api';
 
 interface AuthState {
   token: string;
-  user: object;
+  user: object; //eslint-disable-line
 }
 
 interface SignInCredentials {
@@ -12,7 +12,7 @@ interface SignInCredentials {
 }
 
 interface AuthContextData {
-  user: object;
+  user: object; //eslint-disable-line
   signIn(credentials: SignInCredentials): Promise<void>;
   signOut(): void;
 }
