@@ -5,7 +5,7 @@ import GlobalStyle from './styles/global';
 import SignIn from './pages/SignIn/index';
 // import SignUp from './pages/SignUp/index';
 
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider } from './hooks/AuthContext';
 
 const App: React.FC = () => {
   return (
