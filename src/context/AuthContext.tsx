@@ -1,5 +1,5 @@
 import React, { createContext, useCallback } from 'react';
-import api from '../services/api'
+import api from '../services/api';
 
 interface SignInCredentials {
   email: string;
@@ -13,22 +13,20 @@ interface AuthContextData {
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
-const AuthProvider: React.FunctionComponent<> = ({ children }) => {
-const signIn = useCallback(async({email, password})=> {
-const response = await api.post('sessions', {
-  email,
-  password,
-  })
+const AuthProvider: React.FC = ({ children }) => {
+  const signIn = useCallback(async ({ email, password }) => {
+    const response = await api.post('sessions', {
+      email,
+      password,
+    });
 
-  console.log(response.data)
-}, [])
+    console.log(response.data);
+  }, []);
 
   return (
-    <AuthContextData.Provider
     <AuthContext.Provider value={{ name: 'Leonardo', signIn }}>
-    {children}
+      {children}
     </AuthContext.Provider>
-  )
-}
-
-export {AuthContext, AuthProvider}
+  );
+};
+export { AuthContext, AuthProvider };
