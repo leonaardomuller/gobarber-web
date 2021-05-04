@@ -41,6 +41,8 @@
     ],
     "react/jsx-props-no-spreading": "off",
     "no-unused-expressions": "off",
+    "camelcase": [1, {"properties": "never"}],
+
     "react/prop-types": "off",
     "react/jsx-one-expression-per-line": "off",
     "react-hooks/rules-of-hooks": "error",
@@ -68,7 +70,8 @@
         "allowExpressions": true
       }
     ],
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/camelcase": "off"
   },
   "settings": {
     "import/resolver": {
