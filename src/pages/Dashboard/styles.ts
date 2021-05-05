@@ -36,6 +36,7 @@ export const Profile = styled.div`
   align-items: center;
   margin-left: 80px;
 
+  }
   img {
     width: 56px;
     height: 56px;
@@ -49,7 +50,7 @@ export const Profile = styled.div`
     line-height: 24px;
 
     span {
-      color: #f4ede8;
+      color: #f4ede8; 
     }
 
     strong {
@@ -59,7 +60,7 @@ export const Profile = styled.div`
 `;
 
 export const Content = styled.main`
-  max-width: 1120;
+  max-width: 1120px;
   margin: 64px auto;
   display: flex;
 `;
@@ -105,6 +106,10 @@ export const Section = styled.div`
     padding-bottom: 16px;
     margin-bottom: 16px;
   }
+
+  > p {
+    color: #999591;
+  }
 `;
 
 export const Appointment = styled.div`
@@ -120,6 +125,7 @@ export const Appointment = styled.div`
     display: flex;
     align-items: center;
     color: #f4ede8;
+    width: 70px;
 
     svg {
       color: #cb0d16;
@@ -275,7 +281,7 @@ export const Calendar = styled.aside`
   }
 
   .DayPicker-Day--selected {
-    background: #ff9000 !important;
+    background: #cb0d16 !important;
     border-radius: 10px;
     color: #232129 !important;
   }
